@@ -24,6 +24,8 @@ def get_list_of_urls(webpage,path):
     
     chrome_options = Options()
     chrome_options.add_argument("--headless=new")
+    chrome_options.add_argument("--ignore-certificate-errors")
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(service = Service(path), options=chrome_options)
     driver.get(webpage)
     # The element is located within an iframe, required to locate the iframe and switch frames
@@ -154,6 +156,8 @@ def scrape_info(list_of_urls, path):
 
     chrome_options = Options()
     chrome_options.add_argument("--headless=new")
+    chrome_options.add_argument("--ignore-certificate-errors")
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     list_status = []
     description_list = []
     permit_list = []
@@ -211,6 +215,8 @@ def get_recent_urls(webpage, path, recent_url):
     
     chrome_options = Options()
     chrome_options.add_argument("--headless=new")
+    chrome_options.add_argument("--ignore-certificate-errors")
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(service = Service(path), options=chrome_options)
     driver.get(webpage)
     # The element is located within an iframe, required to locate the iframe and switch frames
