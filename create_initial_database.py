@@ -3,7 +3,7 @@ import pickle
 
 
 url = 'https://www.shapeyourcity.ca/development'
-PATH = "C:\Program Files (x86)\chromedriver-win64\chromedriver.exe"
+PATH = "C:/Program Files (x86)/chromedriver-win64/chromedriver.exe"
 
 all_permit_urls = functions.get_list_of_urls(url, PATH)
 # save the urls to a pickle file that can be opened at any time without re-running the code. 
